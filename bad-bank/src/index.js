@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Navbar from 'react-bootstrap';
+import ReactDOM from 'react-dom';
+import Navbar from 'react-bootstrap/Navbar';
 
 import App from './App.js'
 import CreateAccount from './components/createaccount.js'
@@ -13,7 +14,7 @@ import AllData from './components/alldata.js'
 function Spa() {
   return (
     <HashRouter>
-      <NavBar/>
+      <Navbar/>
       <UserContext.Provider value={{users:[{name:'abel',email:'abel@mit.edu',password:'secret',balance:100}]}}>
         <div className="container" style={{padding: "20px"}}>
           <Route path="/" exact component={App} />
