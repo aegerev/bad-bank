@@ -1,7 +1,5 @@
-const Route       = ReactRouterDOM.Route;
-const Link        = ReactRouterDOM.Link;
-const HashRouter  = ReactRouterDOM.HashRouter;
-const UserContext = React.createContext(null);
+import {Route, Link, HashRouter} from 'react-router-dom';
+import UserContext from 'react';
 
 function Card(props){
     function classes(){
