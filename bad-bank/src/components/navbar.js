@@ -1,7 +1,7 @@
-import Navbar from 'react-bootstrap';
+import React from 'react';
 
-function NavBar(){
-    return(
+export function NavBar() {
+	    return(
       <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="#">BadBank</a>
@@ -33,4 +33,4 @@ function NavBar(){
       </nav>
       </>
     );
-  }
+}

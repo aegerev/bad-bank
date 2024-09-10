@@ -1,16 +1,33 @@
-import React from "react";
-import Card from 'react-bootstrap/Card';
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import { NavBar } from './components/navbar';
+import { Login } from './components/login'; 
+import { Home } from './components/home';
+import { AllData } from './components/alldata';
+import { Withdraw } from './components/withdraw';
+import { Balance } from './components/balance';
+import { Deposit } from './components/deposit';
+import { CreateAccount } from './components/createaccount';
 
-function App() {
-  return (
-    <Card
-      txtcolor="black"
-      header="BadBank Landing Module"
-      title="Welcome to the bank"
-      text="You can move around using the navigation bar."
-      body={(<img src="bank.png" className="img-fluid" alt="Responsive image"/>)}
-    />    
-  );  
+export function App() {
+	return (
+		<HashRouter>
+			<>
+				<h1>Welcome to Bad Bank</h1>
+				<NavBar />
+
+				<Routes>
+					<Route path="/" exact element={<Home />} />
+					<Route path="/login" element={<Login />} />
+					{/* Todo: Add the routes for the remaining elements */}
+					{/* '/alldata' must point to the `AllData` component, `/createaccount` must point to the `CreateAccount` component and so on..*/}
+					<Route path="/alldata" element={<AllData />} />
+					<Route path="/withdraw" element={<Withdraw />} />
+					<Route path="/balance" element={<Balance />} />
+					<Route path="/deposit" element={<Deposit />} />
+					<Route path="/createaccount" element={<CreateAccount />} />
+        </Routes>
+			</>
+		</HashRouter>
+	);
 }
-
-export default App;

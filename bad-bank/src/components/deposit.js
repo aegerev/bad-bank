@@ -1,7 +1,5 @@
-function Deposit(){
-    return (
-      <h1>Deposit</h1>
-    )
-  }
+import React from 'react';
 
-  export default Deposit;
+export function Deposit() {
+	return <h1>Deposit</h1>;
+}

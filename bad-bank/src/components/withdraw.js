@@ -1,7 +1,5 @@
-function Withdraw(){
-    return (
-      <h1>Withdraw</h1>
-    )
-  }
+import React from 'react';
 
-  export default Withdraw;
+export function Withdraw() {
+	return <h1>Withdraw</h1>;
+}
