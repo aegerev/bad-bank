@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Card from 'react-bootstrap/Card';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Card
+      txtcolor="black"
+      header="BadBank Landing Module"
+      title="Welcome to the bank"
+      text="You can move around using the navigation bar."
+      body={(<img src="bank.png" className="img-fluid" alt="Responsive image"/>)}
+    />    
+  );  
 }
 
 export default App;
