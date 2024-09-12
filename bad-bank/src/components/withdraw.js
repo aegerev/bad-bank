@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { UserContext } from './context';
 
 export function Withdraw() {
-	return <h1>Withdraw</h1>;
+	const wd = useContext(UserContext);
+	return <h1>Withdraw <br/>
+				{JSON.stringify(wd)};
+		  </h1>;
 }

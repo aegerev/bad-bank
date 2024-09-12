@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { UserContext } from './context';
 
 export function CreateAccount() {
-	return <h1>Create Account</h1>;
+	const createAcc = useContext(UserContext)
+	return <h1>Create Account <br/>
+				{JSON.stringify(createAcc)}
+			</h1>;
 }

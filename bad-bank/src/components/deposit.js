@@ -1,5 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { UserContext } from './context';
 
 export function Deposit() {
-	return <h1>Deposit</h1>;
+	const depos = useContext(UserContext);
+
+	return <h1>Deposit <br/>
+				{JSON.stringify(depos)}
+		  </h1>;
 }

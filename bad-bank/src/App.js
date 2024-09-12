@@ -1,21 +1,22 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/navbar';
-import { Login } from './components/login'; 
 import { Home } from './components/home';
-import { AllData } from './components/alldata';
+import { Login } from './components/login'; 
+import { AllData } from './components/alldata.js';
 import { Withdraw } from './components/withdraw';
 import { Balance } from './components/balance';
 import { Deposit } from './components/deposit';
 import { CreateAccount } from './components/createaccount';
+import {UserProvider} from './components/context';
 
 export function App() {
 	return (
-		<HashRouter>
-			<>
+	<HashRouter>
+		<>
 				<h1>Welcome to Bad Bank</h1>
 				<NavBar />
-
+			<UserProvider>
 				<Routes>
 					<Route path="/" exact element={<Home />} />
 					<Route path="/login" element={<Login />} />
@@ -26,8 +27,9 @@ export function App() {
 					<Route path="/balance" element={<Balance />} />
 					<Route path="/deposit" element={<Deposit />} />
 					<Route path="/createaccount" element={<CreateAccount />} />
-        </Routes>
-			</>
-		</HashRouter>
+        		</Routes>
+			</UserProvider>
+		</>
+	</HashRouter>
 	);
 }
