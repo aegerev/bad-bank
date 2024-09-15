@@ -3,11 +3,20 @@ import { UserContext } from './context';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
  export function Balance() {
-	const bal = useContext(UserContext)
+	const {user} = useContext(UserContext)
 	
 	return (
-	<h1>Balance <br/>
-		{JSON.stringify(bal)}
-	</h1>
+		<div className="container">
+			{user ? (
+				<div>
+					<h2>Balance</h2>
+					<p className="lead">Your current balance is: ${user.balance}</p>
+				</div>
+			) : (
+				<div className="alert alert-warning" role="alert">
+					You must be logged in to view the balance.
+				</div>
+			)}
+		</div>
 	);
 }
