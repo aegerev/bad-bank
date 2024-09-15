@@ -9,6 +9,7 @@ import { Balance } from './components/balance';
 import { Deposit } from './components/deposit';
 import { CreateAccount } from './components/createaccount';
 import {UserProvider} from './components/context';
+import "./App.css";
 
 export function App() {
 	return (

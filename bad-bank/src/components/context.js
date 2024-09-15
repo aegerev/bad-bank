@@ -1,5 +1,7 @@
 import React, {createContext} from 'react';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export const UserContext = createContext();
 
 export const UserProvider = ({children}) => {
