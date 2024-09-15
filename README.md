@@ -7,6 +7,7 @@ This project was part of Module 16 of the MIT xPRO MERN Stack Bootcamp. This pro
 This app teaches the components of  screen construction, such as a navigation bar, routing, and styling. 
 
 ## Deployment
+https://aegerev.github.io/bad-bank
 
 ## Credits
 (c) 2024 Alexander Egerev. All Rights Reserved. 
